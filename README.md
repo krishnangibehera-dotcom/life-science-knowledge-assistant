@@ -1,76 +1,157 @@
 # Life Science Knowledge Assistant (RAG)
 
-A Streamlit application concept that lets users upload life-science PDFs/TXT files, retrieve relevant passages with semantic search, and generate context-grounded answers using a locally running Ollama language model.
+A Python-based Retrieval-Augmented Generation (RAG) project concept for searching life-science learning materials and generating context-grounded answers using a locally hosted language model.
 
-> **Project status:** Starter implementation. It has not been executed or tested in this environment. Test the setup and answer quality before presenting it as a completed working application.
+## Project Overview
 
-## Features
-- Upload multiple PDF/TXT study documents
-- Extract text and split it into overlapping chunks
-- Create embeddings with `sentence-transformers/all-MiniLM-L6-v2`
-- Search semantically using FAISS
-- Generate answers using a local Ollama model through LangChain
-- Show retrieved passages and source filenames
-- Prompt the model to acknowledge when uploaded documents do not contain the answer
+Life-science students often need to search across multiple study documents to find relevant information quickly. This project explores a document-question-answering workflow that combines semantic search with a local large language model (LLM).
 
-## Architecture
-`PDF/TXT upload → text extraction → chunking → embeddings → FAISS retrieval → Ollama LLM → answer + retrieved evidence`
+Users can upload supported study documents, retrieve relevant text passages, and use the retrieved context to formulate answers.
 
-See [`docs/architecture.md`](docs/architecture.md).
+**Project status:** Starter implementation; execution and answer quality have not yet been verified.
 
-## Requirements
+## Key Features
+
+- PDF and TXT document ingestion workflow
+- Text extraction and overlapping text chunking
+- Semantic embeddings using Sentence Transformers
+- Similarity search using FAISS
+- Local LLM integration through Ollama
+- Streamlit-based user interface
+- Display of retrieved evidence and source filenames
+- Sample evaluation questions for manual assessment
+
+## Technology Stack
+
+| Technology | Purpose |
+|---|---|
+| Python | Application development |
+| Streamlit | Interactive web interface |
+| Sentence Transformers | Text embeddings |
+| FAISS | Similarity-based retrieval |
+| Ollama | Local language-model serving |
+| LangChain | LLM integration |
+| Pandas | Evaluation data handling |
+
+## Project Architecture
+
+Document Upload → Text Extraction → Text Chunking → Embedding Generation → FAISS Retrieval → Local LLM → Context-Grounded Answer
+
+The retrieval component is designed to find relevant passages before the language model generates an answer.
+
+## Repository Structure
+
+```text
+life-science-knowledge-assistant/
+├── app.py
+├── requirements.txt
+├── README.md
+├── .gitignore
+├── data/
+│   ├── evaluation_questions.csv
+│   └── sample_documents/
+│       ├── central_dogma.txt
+│       ├── ecology_basics.txt
+│       ├── immune_system_basics.txt
+│       └── pcr_basics.txt
+└── docs/
+    ├── architecture.md
+    ├── evaluation_plan.md
+    └── resume_bullets.md
+```
+
+## Sample Data
+
+The repository contains original educational notes covering:
+
+- Central dogma of molecular biology
+- Basic ecology concepts
+- Immune system fundamentals
+- PCR principles
+
+The evaluation CSV contains example questions for manually assessing document retrieval and answer relevance.
+
+These files are demonstration materials, not a comprehensive scientific reference or a validated benchmark dataset.
+
+## Setup and Usage
+
+### Prerequisites
+
 - Python 3.10 or 3.11 recommended
-- Ollama installed and running
-- Enough RAM and disk space for the chosen local model
-- Internet access on first run to download Python packages and the embedding model
+- Ollama installed
+- Sufficient memory and disk space for the selected local model
+- Internet access for initial dependency and model downloads
 
-## Setup (Windows PowerShell)
-1. Install Ollama from https://ollama.com/download.
-2. Open PowerShell and download a model, for example:
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/krishnangibehera-dotcom/life-science-knowledge-assistant.git
+   cd life-science-knowledge-assistant
+   ```
+
+2. Create and activate a virtual environment on Windows:
+
+   ```powershell
+   python -m venv .venv
+   .\.venv\Scripts\Activate.ps1
+   ```
+
+3. Install dependencies:
+
+   ```powershell
+   python -m pip install -r requirements.txt
+   ```
+
+4. Install Ollama from https://ollama.com/download.
+
+5. Download the example model:
 
    ```powershell
    ollama pull llama3.2
    ```
 
-3. Open this project folder in VS Code and create a virtual environment:
-
-   ```powershell
-   python -m venv .venv
-   .\.venv\Scripts\Activate.ps1
-   python -m pip install -r requirements.txt
-   ```
-
-4. Run the app:
+6. Launch the application:
 
    ```powershell
    streamlit run app.py
    ```
 
-5. Open the local URL Streamlit prints in the terminal. Upload documents, click **Build document search index**, then ask a question.
+7. Open the local URL displayed in the terminal, upload supported documents, build the document search index, and ask a question.
 
-If PowerShell blocks activation, use `.\.venv\Scripts\python.exe -m pip install -r requirements.txt` and `.\.venv\Scripts\python.exe -m streamlit run app.py`.
+**Note:** These are the intended setup instructions. Successful installation and execution have not yet been confirmed.
 
-## Included sample data
-`data/sample_documents/` contains original, compact educational notes written for this starter repository. They are demonstration documents, not a comprehensive or authoritative biology reference.
+## Evaluation Plan
 
-`data/evaluation_questions.csv` contains example questions for manually checking retrieval and answer quality.
+The included evaluation questions can be used to assess:
 
-## Limitations and responsible use
-- This is an educational prototype, not a validated medical or clinical decision system.
-- Outputs can be incorrect. Verify important claims against primary literature or textbooks.
-- Scanned PDFs may need OCR; this version extracts selectable text only.
-- FAISS index is rebuilt in memory when you click the index button; persistence and user/session isolation are not implemented.
-- Source references are filenames and chunk numbers, not reliable PDF page-level citations yet.
-- Local model quality and speed depend on hardware.
-- Review licenses and permissions before redistributing third-party documents or datasets.
+- Whether relevant passages are retrieved
+- Whether answers are supported by retrieved evidence
+- Whether the system acknowledges missing information
+- Whether irrelevant documents affect the response
+- Response latency and resource requirements
 
-## Suggested next improvements
-1. Add PDF page-number metadata and precise citations.
-2. Persist and reload FAISS indexes.
-3. Add a retrieval evaluation script and answer-quality rubric.
-4. Add tests for empty PDFs, duplicate files, and unsupported formats.
-5. Add a chat history and document removal controls.
-6. Record measured latency and evaluation results only after testing.
+No quantitative performance results are reported because formal testing has not yet been completed.
 
-## Resume guidance
-Only describe features you have personally implemented and tested. See [`docs/resume_bullets.md`](docs/resume_bullets.md) for truthful draft wording.
+## Limitations
+
+- The application has not yet been fully tested.
+- Scanned PDFs may require OCR support.
+- Retrieval quality depends on document content, chunking, and embedding quality.
+- Local LLM performance depends on hardware and model selection.
+- Answers may be inaccurate and should be checked against reliable textbooks and primary literature.
+- This is an educational prototype, not a medical or clinical decision-support system.
+
+## Future Improvements
+
+- Add automated retrieval and answer-quality evaluation
+- Improve source citations with document page numbers
+- Persist and reload the vector index
+- Add document management and chat history
+- Add automated tests and error handling
+- Benchmark latency and retrieval quality on a documented test set
+
+## Disclaimer
+
+This project is intended for educational and learning purposes only. It is not a substitute for scientific verification, professional advice, or clinical decision-making.
