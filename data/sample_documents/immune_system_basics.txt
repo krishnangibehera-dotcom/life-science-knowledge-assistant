@@ -1,0 +1,9 @@
+IMMUNE SYSTEM BASICS — EDUCATIONAL DEMONSTRATION NOTE
+
+The immune system protects the body against infectious agents and contributes to tissue surveillance. Innate immunity provides rapid, broadly targeted responses. Components include epithelial barriers, phagocytes, natural killer cells, complement proteins, and inflammatory signaling.
+
+Adaptive immunity is antigen-specific and can generate immunological memory. B lymphocytes can differentiate into antibody-secreting plasma cells. T lymphocytes include helper T cells, which coordinate immune responses, and cytotoxic T cells, which can kill infected or abnormal cells.
+
+Antigens are molecular structures recognized by immune receptors or antibodies. Antibodies bind particular epitopes on antigens. Antigen presentation by major histocompatibility complex (MHC) molecules helps activate T cells. MHC class I commonly presents intracellularly derived peptides to CD8-positive T cells, while MHC class II presents peptides to CD4-positive T cells.
+
+Vaccines aim to induce protective immune memory without requiring the person to experience the full disease. Vaccine platforms vary and can include inactivated organisms, live attenuated organisms, protein subunits, viral vectors, and nucleic-acid approaches. Specific vaccine performance and safety depend on the product and evidence from appropriate studies.

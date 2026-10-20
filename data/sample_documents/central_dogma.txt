@@ -1,0 +1,9 @@
+MOLECULAR BIOLOGY: CENTRAL DOGMA — EDUCATIONAL DEMONSTRATION NOTE
+
+The central dogma describes the common flow of sequence information from DNA to RNA to protein. DNA replication copies DNA. Transcription uses a DNA template to synthesize RNA. Translation uses messenger RNA codons to guide amino-acid incorporation by the ribosome.
+
+A gene may contain regulatory sequences and transcribed regions. In eukaryotes, many primary RNA transcripts are processed; pre-mRNA commonly undergoes 5-prime capping, splicing to remove introns, and 3-prime polyadenylation before export to the cytoplasm.
+
+During translation, transfer RNAs deliver amino acids corresponding to codons. The genetic code is degenerate because multiple codons can encode the same amino acid. Start and stop codons help define the translated open reading frame.
+
+Gene expression is regulated at multiple levels, including chromatin accessibility, transcription, RNA processing and stability, translation, and protein modification or degradation. Exceptions and specialized information-transfer mechanisms exist, so the central dogma is a useful framework rather than a complete description of every biological process.

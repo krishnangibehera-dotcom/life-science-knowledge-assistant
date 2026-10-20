@@ -1,0 +1,13 @@
+question,expected_source,reference_answer
+What are the three main stages of PCR?,pcr_basics.txt,"Denaturation, annealing, and extension."
+Why are primers needed in PCR?,pcr_basics.txt,They bind complementary target sequences and provide starting points for DNA polymerase.
+What is ecology?,ecology_basics.txt,The study of interactions among organisms and their physical environment.
+How does a community differ from an ecosystem?,ecology_basics.txt,A community includes interacting populations; an ecosystem also includes abiotic components.
+What is one difference between innate and adaptive immunity?,immune_system_basics.txt,Innate immunity is rapid and broadly targeted; adaptive immunity is antigen-specific and can generate memory.
+Which MHC class commonly presents intracellular peptides to CD8-positive T cells?,immune_system_basics.txt,MHC class I.
+What is transcription?,central_dogma.txt,Synthesis of RNA using a DNA template.
+What happens to introns in many eukaryotic pre-mRNA transcripts?,central_dogma.txt,They are removed by splicing.
+What is an ecosystem?,ecology_basics.txt,A community of organisms together with abiotic environmental components.
+What are two considerations in primer design?,pcr_basics.txt,Specificity and suitable melting temperature; other acceptable examples include avoiding strong self-complementarity.
+What is immunological memory?,immune_system_basics.txt,The adaptive immune system's ability to respond more effectively to a previously encountered antigen.
+What are the main information-flow steps in the central dogma?,central_dogma.txt,"DNA replication, transcription from DNA to RNA, and translation from RNA to protein."

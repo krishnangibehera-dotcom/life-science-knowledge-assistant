@@ -1,0 +1,9 @@
+PCR BASICS — EDUCATIONAL DEMONSTRATION NOTE
+
+Polymerase chain reaction (PCR) is an in-vitro method used to amplify a selected DNA region. A typical reaction contains template DNA, two primers, thermostable DNA polymerase, dNTPs, buffer, magnesium ions, and nuclease-free water.
+
+The three repeated stages are denaturation, annealing, and extension. During denaturation, heat separates double-stranded DNA. During annealing, the temperature is lowered so primers can bind complementary target sequences. During extension, DNA polymerase extends the primers by adding nucleotides. Repeated cycles produce an exponential increase in the target region when the reaction performs efficiently.
+
+Primer design considerations include target specificity, suitable melting temperatures, avoidance of strong self-complementarity, and checking for unintended binding. PCR controls commonly include a no-template control; depending on the experiment, positive and extraction controls may also be useful.
+
+PCR is sensitive to contamination. Work areas, pipettes, and reagents should be managed using appropriate laboratory procedures. This note is a brief educational overview and is not a substitute for a validated protocol.

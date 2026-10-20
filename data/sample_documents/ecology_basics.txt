@@ -1,0 +1,9 @@
+ECOLOGY BASICS — EDUCATIONAL DEMONSTRATION NOTE
+
+Ecology is the study of interactions among organisms and between organisms and their physical environment. Levels of ecological organization commonly include organism, population, community, ecosystem, biome, and biosphere.
+
+A population consists of individuals of the same species living in a defined area. A community includes populations of different species in an area. An ecosystem includes the community and abiotic components such as light, water, soil, temperature, and nutrients.
+
+Energy enters most ecosystems through photosynthesis and flows through trophic levels. Producers capture energy, consumers obtain energy by feeding on other organisms, and decomposers break down organic matter. Energy is lost as heat at each trophic transfer, so energy flow is not a closed cycle. Nutrients such as carbon and nitrogen cycle between organisms and the environment.
+
+Biodiversity describes variation at genetic, species, and ecosystem levels. Habitat loss, pollution, invasive species, overexploitation, and climate change can contribute to biodiversity decline. Conservation strategies can include habitat protection, restoration, sustainable resource use, and monitoring.
